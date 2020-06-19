@@ -2,7 +2,7 @@
 // @id dronePathTravelPlanner
 // @name IITC Plugin: Drone Travel Path Planner
 // @category Tweaks
-// @version 0.9.0
+// @version 0.9.0.1
 // @namespace	https://github.com/tehstone/IngressDronePath
 // @downloadURL	https://github.com/tehstone/IngressDronePath/raw/master/dronePathTravelPlanner.user.js
 // @homepageURL	https://github.com/tehstone/IngressDronePath
@@ -67,8 +67,8 @@ function wrapper(plugin_info) {
 	map = window.map;
 	calculationMethods = 
 	{
-		"500/16": {"radius": 500, "gridSize": 16},
-		"570/17": {"radius": 570, "gridSize": 17}
+		"500/16": {"radius": 500, "gridSize": 16, "keyRadius": 1250},
+		"570/17": {"radius": 570, "gridSize": 17, "keyRadius": 1250}
 	}
 
 	const d2r = Math.PI / 180.0;
@@ -448,7 +448,7 @@ function wrapper(plugin_info) {
 					)
 					dGridLayerGroup.addLayer(portalDroneIndicator);
 					if (settings.keyRange) {
-						portalDroneIndicatorKey = L.circle(coord, calcMethod["radius"] * 2,
+						portalDroneIndicatorKey = L.circle(coord, calcMethod["keyRadius"],
 						{ fill: false, color: settings.circleColor, weight: settings.circleWidth, interactive: false }
 					)
 						dGridLayerGroup.addLayer(portalDroneIndicatorKey);
