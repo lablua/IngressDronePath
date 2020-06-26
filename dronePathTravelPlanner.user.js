@@ -815,6 +815,7 @@ function wrapper(plugin_info) {
 					 <select id="selectCalculationType">
 						 <option value="500/16">500m / L16 cells</option>
 						 <option value="570/17">570m / L17 cells</option>
+						 <option value="250/13">250m / L13 cells</option>
 					 </select>
 					 <p>
 					 Please note that neither of these methods are completely accurate. More investigation into the specifics of which portals will be in range is still needed.
