@@ -2,7 +2,7 @@
 // @id dronePathTravelPlanner
 // @name IITC Plugin: Drone Travel Path Planner
 // @category Tweaks
-// @version 0.14.2
+// @version 0.14.2.1
 // @namespace	https://github.com/tehstone/IngressDronePath
 // @downloadURL	https://github.com/tehstone/IngressDronePath/raw/master/dronePathTravelPlanner.user.js
 // @homepageURL	https://github.com/tehstone/IngressDronePath
@@ -76,7 +76,8 @@ function wrapper(plugin_info) {
 	calculationMethods =
 	{
 		"500/16": {"radius": 500, "gridSize": 16},
-		"570/17": {"radius": 570, "gridSize": 17}
+		"570/17": {"radius": 570, "gridSize": 17},
+		"250/13": {"radius": 250, "gridSize": 13}
 	}
 
 	const defaultSettings = {
